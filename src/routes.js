@@ -16,9 +16,7 @@ const Portfolio = resolve => {
 
 
 export const routes = [
-    { path: '', name: 'home', components: {
-        default: Home,
-        'header-top': Header } }, 
+    { path: '', name: 'home', component: Home },
     { path: '/portfolio', component: Portfolio },
     { path: '/stocks', component: Stocks }
 ];
