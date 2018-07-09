@@ -1,17 +1,10 @@
 <template>
 <div>
-    
     <div class="container">
         <app-header></app-header>
         <br><br>
-        <div class="row">
-            <div class="col-xs-12">
-                <router-view></router-view>  
-            </div>
-        </div>
-              
+        <router-view></router-view>  
     </div>
-
 </div>
     
 </template>
