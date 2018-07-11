@@ -21,18 +21,30 @@ export default {
     data() {
         return {
             quantity: 0
+           
+        }
+    },
+    computed: {
+        funds() {
+            return this.$store.getters.funds;
         }
     },
     methods: {
         buyStock() {
-            const order = {
-                stockId: this.stock.id,
-                stockPrice: this.stock.price,
-                quantity: this.quantity 
-            };
-            //console.log(order);
-            this.$store.dispatch('buyStock', order);
-            this.quantity = 0;
+            if(this.funds < (this.quantity * this.stock.price)) {
+                this.$emit('warning');
+            } else {
+                const order = {
+                    stockId: this.stock.id,
+                    stockPrice: this.stock.price,
+                    quantity: this.quantity 
+                };
+                //console.log(order);
+                this.$store.dispatch('buyStock', order);
+                this.quantity = 0;
+            }
+            
+            
         }
     }
 }
