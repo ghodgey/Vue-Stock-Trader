@@ -18,7 +18,7 @@ const mutations = {
         state.funds -= (stockPrice * quantity);
     },
     'SELL_STOCK' (state, {stockId, quantity, stockPrice}) {
-        const record = state.stocks.find(element => element.id == stockId);
+        const record = state.stocks.find(element => element.id == stockId);//find the id in state.stocks where it is the same as the stock being sold from portfolio/stock
         if(record.quantity > quantity) {
             record.quantity -= quantity;
         } else {
