@@ -16,7 +16,7 @@
           <a class="dropdown-item" href="#">Load Data</a>
         </div>
         </li>
-        <li class="nav-item nav-link"><strong>Funds: ${{ funds }}</strong></li>
+        <li class="nav-item nav-link"><strong>Funds: {{ funds | currency }}</strong></li>
       
     </ul>
 </nav>

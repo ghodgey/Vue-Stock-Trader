@@ -28,7 +28,7 @@ export default {
     },
     methods: {
         updateWarning() {
-            this.warning = 'You do not have sufficient funds to purchase those funds.'
+            this.warning = 'You do not have sufficient funds to purchase those stocks.'
             var self = this;
             setTimeout(function(){ self.warning = ''; }, 3000 );
         }
